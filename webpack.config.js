@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 /** @type {import('webpack').Configuration} */
 module.exports = {
   mode: 'none',
-  entry: './computed/src/index.js',
+  entry: './watch/src/index.js',
   module: {
     rules: [
       {
