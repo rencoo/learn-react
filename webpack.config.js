@@ -5,8 +5,35 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
   mode: 'none',
   entry: './computed/src/index.js',
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        options: {
+          presets: [
+            '@babel/preset-env',
+            '@babel/preset-react'
+          ]
+        }
+      },
+      {
+        test: /\.css$/,
+        loaders: [
+          {
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          }
+        ]
+      }
+    ]
+  },
   plugins: [
     new CleanWebpackPlugin(),
-    new HtmlWebpackPlugin()
+    new HtmlWebpackPlugin({
+      template: './index.html'
+    })
   ]
 }
