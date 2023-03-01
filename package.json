@@ -1,0 +1,27 @@
+{
+  "name": "learn-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rencoo/learn-react.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rencoo/learn-react/issues"
+  },
+  "homepage": "https://github.com/rencoo/learn-react#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^2.0.1",
+    "html-webpack-plugin": "^4.5.2",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.12"
+  }
+}
