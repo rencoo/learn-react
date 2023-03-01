@@ -1,10 +1,11 @@
 const CleanWebpackPlugin = require('clean-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 /** @type {import('webpack').Configuration} */
 module.exports = {
   mode: 'none',
-  entry: './slot/src/index.js',
+  entry: './css/src/index.js',
   module: {
     rules: [
       {
@@ -21,10 +22,15 @@ module.exports = {
         test: /\.css$/,
         loaders: [
           {
-            loader: 'style-loader'
+            // loader: 'style-loader'
+            loader: MiniCssExtractPlugin.loader,
           },
           {
-            loader: 'css-loader'
+            loader: 'css-loader',
+            options: {
+              modules: true,
+              localIdentName: "[name]_[local]__[hash:base64:5]"
+            }
           }
         ]
       }
@@ -34,6 +40,7 @@ module.exports = {
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
       template: './index.html'
-    })
+    }),
+    new MiniCssExtractPlugin()
   ]
 }

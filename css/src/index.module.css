@@ -1,0 +1,9 @@
+.div {
+  color: red;
+  font-size: 234px;
+}
+
+/* 另一种方式就是在使用css-loader时，使用exclude和include来区别哪些需要作为css module使用 */
+:global(.div) {
+  font-size: 30px;
+}
