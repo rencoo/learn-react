@@ -38,5 +38,4 @@ class App extends React.Component {
 
 // ========================================
 const rootElement = document.getElementById('app');
-// ReactDOM.render(<App />, rootElement)
 ReactDOM.render(<App />, rootElement);
