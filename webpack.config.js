@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 /** @type {import('webpack').Configuration} */
 module.exports = {
   mode: 'none',
-  entry: './compare/src/index.js',
+  entry: './lifecycle/src/index.js',
   module: {
     rules: [
       {
