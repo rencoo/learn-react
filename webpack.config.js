@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 /** @type {import('webpack').Configuration} */
 module.exports = {
   mode: 'none',
-  entry: './compare1/src/index.js',
+  entry: './ahook/index.tsx',
   module: {
     rules: [
       {
@@ -16,6 +16,20 @@ module.exports = {
             '@babel/preset-env',
             '@babel/preset-react'
           ]
+        }
+      },
+      {
+        test: /\.(ts|tsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: [
+              '@babel/preset-env',
+              '@babel/preset-react',
+              '@babel/preset-typescript'
+            ]
+          }
         }
       },
       {
