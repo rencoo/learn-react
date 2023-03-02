@@ -27,10 +27,11 @@ function App() {
       <NewComponent
           header={<div>This is header content.</div>}
           content={<div>This is main content.</div>}
-          footer={<div>This is footer content.</div>}>
-          <div>
-            This is new component children.
-          </div>
+          footer={<div>This is footer content.</div>}
+      >
+        <div>
+          This is new component children.
+        </div>
       </NewComponent>
     </div>
   )
