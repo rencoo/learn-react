@@ -20,4 +20,4 @@ function App() {
 const rootElement = document.getElementById('app');
 ReactDOM.render(<App />, rootElement);
 
-// ref.current属性的值发生变化，不会跟useState或者useReducer一样触发页面变化
+// 默认情况下，ref.current属性的值发生变化，不会跟useState或者useReducer一样触发页面变化
