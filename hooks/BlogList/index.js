@@ -1,11 +1,11 @@
 import React, { useState, useCallback } from 'react';
 import ReactDOM from 'react-dom';
-import UserList from './UserList';
+import BlogList from './BlogList';
 
 function App() {
   return (
     <>
-      <UserList />
+      <BlogList />
     </>
   );
 }
