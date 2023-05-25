@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 /** @type {import('webpack').Configuration} */
 module.exports = {
   mode: 'none',
-  entry: './strict-mode/index.js',
+  entry: './context-reducer/index.js',
   module: {
     rules: [
       {
